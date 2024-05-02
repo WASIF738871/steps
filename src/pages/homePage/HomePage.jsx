@@ -12,6 +12,9 @@ const HomePage = () => {
   const [isOpen, setIsOpen] = useState(true);
   const handleNextClick = () => {
     if (step < 3) return setStep(step + 1);
+    // Best practice of updating states
+    // if (step < 3) return setStep(currentStep=>step + 1);
+
   };
   const handlePreviousClick = () => {
     if (step > 1) return setStep(step - 1);
