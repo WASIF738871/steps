@@ -21,9 +21,9 @@ const HomePage = () => {
       {isOpen?<button className="close" onClick={()=>{setIsOpen(!isOpen)}}>close component</button>:<button className="close" onClick={()=>{setIsOpen(!isOpen)}}>open component</button>}
       {isOpen && <div className="steps">
           <div className="numbers">
-            <div className={step >= 1 && "active"}>1</div>
-            <div className={step >= 2 && "active"}>2</div>
-            <div className={step == 3 && "active"}>3</div>
+            <div className={step >= 1 ? "active" : ""}>1</div>
+            <div className={step >= 2 ? "active" : ""}>2</div>
+            <div className={step == 3 ? "active" : ""}>3</div>
           </div>
           <p className="message">
             step{step}: {messages[step - 1]}
